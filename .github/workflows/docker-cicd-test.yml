@@ -18,4 +18,5 @@ jobs:
     secrets: inherit
     with:
       userapp: layr/docker-gh-actions-reuse-test
+      runs-on: self-hosted
 
