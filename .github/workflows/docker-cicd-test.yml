@@ -14,9 +14,8 @@ on: [push, create]
 
 jobs:
   call-build:
-    uses: haridusministeerium/workflows/.github/workflows/docker-build-publish-app-selfhosted.yml@master
+    uses: haridusministeerium/workflows/.github/workflows/docker-build-publish.yml@master
     secrets: inherit
     with:
-      userapp: layr/docker-gh-actions-reuse-test
-      #runs-on: self-hosted
+      image: layr/docker-gh-actions-reuse-test
 
