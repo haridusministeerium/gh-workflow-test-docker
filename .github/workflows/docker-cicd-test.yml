@@ -1,16 +1,11 @@
 name: Build, test, release
 
-#on:
-  #pull_request:
-    #branches:
-      #- main
-
-# note "create" event is just so our flows trigger on tag pushes that
-# are tagged with [ci skip], see https://github.com/orgs/community/discussions/179637
-on: [push, create]
-#on:
-  #push:
-    #branches: [ "main", "master" ]
+on:
+  # note "create" event is just so our flows trigger on tag pushes that
+  # are tagged with [ci skip], see https://github.com/orgs/community/discussions/179637
+  create:
+  workflow_dispatch:  # allows manually triggered workflows
+  push:
 
 jobs:
   call-build:
